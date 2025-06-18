@@ -1,0 +1,7 @@
+Evaluation Report for random_forest
+==================================================
+
+Accuracy: 0.9496
+Precision: 0.9514
+Recall: 0.9821
+F1: 0.9665

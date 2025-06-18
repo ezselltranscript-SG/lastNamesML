@@ -1,0 +1,25 @@
+London
+New York
+Paris
+Tokyo
+Madrid
+Barcelona
+Chicago
+Boston
+Washington
+California
+Texas
+Florida
+England
+France
+Germany
+Italy
+Spain
+Mexico
+Canada
+Brazil
+China
+Japan
+India
+Australia
+Russia

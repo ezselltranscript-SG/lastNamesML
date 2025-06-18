@@ -1,0 +1,14 @@
+pandas
+scikit-learn
+numpy
+fuzzywuzzy
+python-Levenshtein
+openpyxl
+jellyfish
+matplotlib
+python-docx
+spacy>=3.0.0
+rapidfuzz
+# Optional dependencies - comment these out if installation issues persist
+# transformers
+# torch
