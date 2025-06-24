@@ -310,7 +310,7 @@ class SurnameCorrector:
         """
         self.all_surnames = surnames
     
-    def set_exclusion_lists(self, common_places: Set[str], common_words: Set[str]) -> None:
+    def set_exclusion_lists(self, common_places: set[str], common_words: set[str]) -> None:
         """
         Set the exclusion lists for better surname detection.
         

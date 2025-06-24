@@ -6,7 +6,7 @@ import re
 import os
 import logging
 import spacy
-from typing import List, Set, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional
 
 # Configurar logging
 logger = logging.getLogger('surname_detection')
@@ -43,7 +43,7 @@ SURNAME_PREFIXES = [
     'Don', 'Doña', 'Doctor', 'Doctora', 'Profesor', 'Profesora'
 ]
 
-def load_exclusion_lists(places_file: Optional[str] = None, words_file: Optional[str] = None) -> Tuple[Set[str], Set[str]]:
+def load_exclusion_lists(places_file: Optional[str] = None, words_file: Optional[str] = None) -> Tuple[set[str], set[str]]:
     """
     Carga listas de exclusión para mejorar la detección de apellidos.
     
@@ -79,7 +79,7 @@ def load_exclusion_lists(places_file: Optional[str] = None, words_file: Optional
     
     return common_places, common_words
 
-def is_likely_surname(word: str, text_context: str, common_places: Set[str], common_words: Set[str]) -> bool:
+def is_likely_surname(word: str, text_context: str, common_places: set[str], common_words: set[str]) -> bool:
     """
     Determina si una palabra es probablemente un apellido basado en múltiples criterios.
     
@@ -155,7 +155,7 @@ def extract_surnames_with_ner(text: str) -> List[Tuple[str, str]]:
 
 def extract_potential_surnames(text: str, use_ner: bool = True, 
                          places_file: Optional[str] = None, words_file: Optional[str] = None,
-                         common_places: Optional[Set[str]] = None, common_words: Optional[Set[str]] = None) -> List[Tuple[str, str]]:
+                         common_places: Optional[set[str]] = None, common_words: Optional[set[str]] = None) -> List[Tuple[str, str]]:
     """
     Extrae potenciales apellidos del texto usando una combinación de NER y reglas.
     

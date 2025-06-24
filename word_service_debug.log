@@ -1,0 +1,104 @@
+2025-06-24 15:11:30,482 - surname_detection - INFO - Modelo de spaCy en inglés cargado correctamente
+2025-06-24 15:11:30,512 - word_service - INFO - 
+==================================================
+2025-06-24 15:11:30,512 - word_service - INFO - Servicio de Corrección de Apellidos en Documentos Word
+2025-06-24 15:11:30,512 - word_service - INFO - ==================================================
+2025-06-24 15:11:30,513 - word_service - INFO - Modelo: models/random_forest_model.pkl
+2025-06-24 15:11:30,513 - word_service - INFO - Datos de referencia: data/processed_surnames.csv
+2025-06-24 15:11:30,513 - word_service - INFO - Documento de entrada: C:/Users/juans/Downloads/merged_document.docx
+2025-06-24 15:11:30,513 - word_service - INFO - Directorio de salida: data/corrected_word
+2025-06-24 15:11:30,514 - word_service - INFO - Verificando archivos de entrada:
+2025-06-24 15:11:30,514 - word_service - INFO -   Archivo de entrada OK: C:/Users/juans/Downloads/merged_document.docx
+2025-06-24 15:11:30,514 - word_service - INFO - Cargando datos de referencia...
+2025-06-24 15:11:30,517 - word_service - INFO - Datos de referencia cargados: 508 registros
+2025-06-24 15:11:30,518 - word_service - INFO - Cargados 163 apellidos de referencia
+2025-06-24 15:11:30,518 - word_service - INFO - Ejemplos de apellidos: ['Mazelin', 'Borntreger', 'Miller', 'Smucker', 'Shetler']...
+2025-06-24 15:11:30,518 - word_service - INFO - Cargando listas de exclusión...
+2025-06-24 15:11:30,518 - surname_detection - INFO - Cargados 25 lugares comunes desde data/common_places.txt
+2025-06-24 15:11:30,518 - surname_detection - INFO - Cargadas 112 palabras comunes desde data/common_words.txt
+2025-06-24 15:11:30,518 - word_service - INFO - Cargadas 25 lugares y 112 palabras comunes para exclusión
+2025-06-24 15:11:30,518 - word_service - INFO - Cargando modelo de corrección...
+2025-06-24 15:11:30,522 - word_service - INFO - Modelo de corrección cargado: RandomForestClassifier
+2025-06-24 15:11:30,522 - word_service - INFO - No se especificó modelo de detección de apellidos. Usando detección basada en reglas.
+2025-06-24 15:11:30,522 - word_service - INFO - Inicializando corrector de apellidos...
+2025-06-24 15:11:30,522 - word_service - INFO - Procesando archivo: C:/Users/juans/Downloads/merged_document.docx
+2025-06-24 15:11:30,522 - word_service - INFO - Procesando documento: C:/Users/juans/Downloads/merged_document.docx
+2025-06-24 15:11:30,522 - word_service - DEBUG - Cargando documento...
+2025-06-24 15:11:30,526 - word_service - DEBUG - Extrayendo texto...
+2025-06-24 15:11:30,531 - word_service - DEBUG - Texto extraído: 7345 caracteres
+2025-06-24 15:11:30,531 - word_service - INFO - Detectando y corrigiendo apellidos...
+2025-06-24 15:11:30,928 - word_service - INFO - Correcciones encontradas: 32
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 1: Freyer -> Troyer (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'West Montvic, ON – Ben Freyer
+April. 25, 2025 – G'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 2: Helmuth's -> Helmuth (Confianza detección: 0.80, Confianza corrección: 0.84)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'This was my mother, Edna Helmuth's last sibling. There'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 3: Rhoda -> Burkholder (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'urviving. See obit. Daniel Rocke Rhoda is planning to star'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 4: Treva -> Troyer (Confianza detección: 0.80, Confianza corrección: 0.90)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'ing a long weekend. Lewis Diener Treva had been losing out'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 5: Dieners -> Millers (Confianza detección: 0.80, Confianza corrección: 0.86)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: ' at her son Larry & Loven Dieners on May 23. She pass'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 6: Christi -> Schwartz (Confianza detección: 0.80, Confianza corrección: 0.92)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: ' present partook of Das Gedächtnis Mahl Christi. Eli as also arrivi'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 7: Miriam -> Ramer (Confianza detección: 0.80, Confianza corrección: 0.89)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'e with no visitors.
+Daughter Miriam and baby son spent '
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 8: Mullett -> Millers (Confianza detección: 0.80, Confianza corrección: 0.86)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: '
+
+Son Ivan was with Ivan Mullett to a wedding in Lyn'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 9: Shockes -> Smoker (Confianza detección: 0.80, Confianza corrección: 0.97)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'ding in Lyndon, KS. Leroy Shockes also went along. Le'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 10: Nettle -> Shetler (Confianza detección: 0.80, Confianza corrección: 0.93)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: ' it leaked out that Ethel Nettle and Freeman Miller,'
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 11: Ervin -> Lavina (Confianza detección: 0.80, Confianza corrección: 0.92)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: 'erger was the 19th. Son Ervin is planned for the '
+2025-06-24 15:11:30,929 - word_service - DEBUG - Corrección 12: Shelter -> Shetler's (Confianza detección: 0.80, Confianza corrección: 0.96)
+2025-06-24 15:11:30,929 - word_service - DEBUG - Contexto: ' picnic on the 28th Samuel Shelter got kicked by a hor'
+2025-06-24 15:11:30,930 - word_service - DEBUG - Corrección 13: Graber's -> Bylers (Confianza detección: 0.80, Confianza corrección: 0.90)
+2025-06-24 15:11:30,930 - word_service - DEBUG - Contexto: 'for Dan and Martha. Jacob Graber's and of there marrie'
+2025-06-24 15:11:30,930 - word_service - DEBUG - Corrección 14: Schmucker's -> Schrock (Confianza detección: 0.80, Confianza corrección: 0.84)
+2025-06-24 15:11:30,930 - word_service - DEBUG - Contexto: 'h in Hindsdaholt at Enos Schmucker's on the 12th of the '
+2025-06-24 15:11:30,930 - word_service - DEBUG - Corrección 15: Eichers -> Lengacher (Confianza detección: 0.80, Confianza corrección: 0.90)
+2025-06-24 15:11:30,930 - word_service - DEBUG - Contexto: 'lcome visitors when Jacob Eichers, son Andy, Melvin M'
+2025-06-24 15:11:30,930 - word_service - DEBUG - Corrección 16: K.'s -> Esh (Confianza detección: 0.80, Confianza corrección: 0.83)
+2025-06-24 15:11:30,930 - word_service - DEBUG - Contexto: 's Bro Joe to one of Sam K.'s friends daughters. '
+2025-06-24 15:11:30,933 - word_service - DEBUG - Corrección 17: Ridders -> Yoders (Confianza detección: 0.80, Confianza corrección: 0.91)
+2025-06-24 15:11:30,933 - word_service - DEBUG - Contexto: ' – Greetings to all Living Ridders, This is a drear's '
+2025-06-24 15:11:30,933 - word_service - DEBUG - Corrección 18: Cake -> Smucker (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,933 - word_service - DEBUG - Contexto: 'eady to use to bake Rhubarb Cake Dessert. Yesterday '
+2025-06-24 15:11:30,933 - word_service - DEBUG - Corrección 19: Lou -> BLOSSERS (Confianza detección: 0.80, Confianza corrección: 0.86)
+2025-06-24 15:11:30,933 - word_service - DEBUG - Contexto: 'th donuts. Her dau. Mary Lou D. Miller from Fill'
+2025-06-24 15:11:30,933 - word_service - DEBUG - Corrección 20: Hospital -> Hochstetler (Confianza detección: 0.80, Confianza corrección: 0.93)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'Sunday to Thurs. in Fillmore Hospital as he had pneumonia'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 21: Rocke -> Rachel (Confianza detección: 0.80, Confianza corrección: 0.94)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'urviving. See obit. Daniel Rocke Rhoda is planning t'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 22: Ascension -> Sensenig (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'ies, only soreness. On Ascension Day is the widows g'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 23: Sisters -> Shetler's (Confianza detección: 0.80, Confianza corrección: 0.91)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'gathering where the Secret Sisters get revealed. There'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 24: Diener -> Yoder (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'ing a long weekend. Lewis Diener Treva had been losi'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 25: Church -> Hurst (Confianza detección: 0.80, Confianza corrección: 0.91)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'dnungsgemäß gnuy at Wallace Church with Andrew Gingeri'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 26: Bunkholder -> Brubaker (Confianza detección: 0.80, Confianza corrección: 0.86)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'es that mean to us? Eli Bunkholder, Lydia and little o'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 27: Friday -> Freys (Confianza detección: 0.80, Confianza corrección: 0.88)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'y; And in church on Good Friday at that. Now they d'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 28: Willing -> Millie (Confianza detección: 0.80, Confianza corrección: 0.87)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: ' is to be on May 9, Lord Willing. Maybe I won't ment'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 29: Saturday -> Swarey (Confianza detección: 0.80, Confianza corrección: 0.88)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: '0 people went thru. Then Saturday was the funeral. Da'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 30: Great -> Graber (Confianza detección: 0.80, Confianza corrección: 0.87)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'put up with me! Ha! My Great Aunt Maryann Schwar'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 31: Maryann -> Martin (Confianza detección: 0.80, Confianza corrección: 0.85)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'th me! Ha! My Great Aunt Maryann Schwartz plans to g'
+2025-06-24 15:11:30,934 - word_service - DEBUG - Corrección 32: Jake -> Joe (Confianza detección: 0.80, Confianza corrección: 0.91)
+2025-06-24 15:11:30,934 - word_service - DEBUG - Contexto: 'ere for supper also Uncle Jake J. S. Schwartz and '
+2025-06-24 15:11:30,934 - word_service - DEBUG - Aplicando correcciones al documento...
+2025-06-24 15:11:31,159 - word_service - INFO - Guardando documento corregido: data/corrected_word\merged_document_corregido.docx
+2025-06-24 15:11:31,171 - word_service - INFO - Generando informe: data/corrected_word\merged_document_informe.docx
+2025-06-24 15:11:31,261 - word_service - INFO - Informe guardado: data/corrected_word\merged_document_informe.docx
+2025-06-24 15:11:31,261 - word_service - INFO - 
+Procesamiento completado con éxito!
